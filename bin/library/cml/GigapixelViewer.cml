@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GestureWorksApplication
+	css="library/css/my_styles_modules.css" 
+	key="ENTER OE KEY" 
+	tuio="false"
+	simulator="false">
+
+	<LibraryKit>
+		<Library type="swf" src="library/assets/openexhibits_assets.swf" />	
+	</LibraryKit>
+	
+	<GigaPixelViewer id="gpv1" x="200" y="180" frame="#frame-e" menu="#menu-1" rotation="10" mouseChildren="false" disableNativeTransform="false" disableAffineTransform="false">
+	
+		<TouchContainer id="frame-c" class="frame_container" visible="true" targetParent="true" mouseChildren="false">
+			<FrameElement id="frame-e" class="frame_element"/>
+		</TouchContainer>
+	
+			<GigapixelElement id="gpe1" class="gigapixel_element" srcXML="library/assets/deepzoom/space.xml" width="700" />
+		
+		
+		<TouchContainer id="img1-info" class="info_container" visible="false" targetParent="true" mouseChildren="false" >
+			<GraphicElement id="info-bg" class="info_bg" shape="rectangle"/>
+			<TextElement id="title" border="false" class="info_title"selectable="false" text="Cygnus X"/>				
+			<TextElement id="description" border="false" class="info_description" selectable="false" text="This is a compiled mosaic image captured by the NASA Spitzer Space Telescope."/>		
+		</TouchContainer>
+		
+		<Menu id="menu-1" class="menu_container" x="0" y="0" alpha="0.6" position="bottomRight" paddingLeft="0" paddingBottom="-50" paddingRight="20" autoHide="true" visible="false">
+			<ButtonElement id="info-btn" class="info_btn" dispatch="mouseDown:info" hit="info-hit" init="info-up" mouseDown="info-down" mouseUp="info-up" mouseOut="info-up">
+				<Container id="info-up">
+					<GraphicElement id="info-bg-up" class="btn-bg-up" />	
+					<SWFElement id="info-fg-up" class="btn-fg-up" classRef="org.openexhibits.assets.Info" />
+				</Container>
+				<Container id="info-down">
+					<GraphicElement id="info-bg-down" class="btn-bg-down" />	
+					<SWFElement id="info-fg-down" class="btn-fg-down" classRef="org.openexhibits.assets.Info" />
+				</Container>	
+				<Container id="info-hit">
+					<GraphicElement id="info-hit-bg" shape="circle" radius="20" color="0x666666" alpha="0" />
+				</Container>
+			</ButtonElement>
+			
+			<ButtonElement id="close-btn" class="close_btn" dispatch="mouseDown:close" hit="close-hit" init="close-up" mouseDown="close-down" mouseUp="close-up" mouseOut="close-up">
+				<Container id="close-up" class="up" >
+					<GraphicElement id="close-bg-up" class="btn-bg-up" />	
+					<SWFElement id="close-fg-up" class="btn-fg-up" classRef="org.openexhibits.assets.Close"/>
+				</Container>
+				<Container id="close-down" class="down">
+					<GraphicElement id="close-bg-down" class="btn-bg-down" />	
+					<SWFElement id="close-fg-down" class="btn-fg-down" classRef="org.openexhibits.assets.Close" />
+				</Container>	
+				<Container id="close-hit" class="hit">
+					<GraphicElement id="close-hit-bg" class="btn-hit" />
+				</Container>
+			</ButtonElement>
+		</Menu>
+		
+		<GestureList>
+			<Gesture ref="n-drag" gestureOn="true"/>
+			<Gesture ref="n-scale" gestureOn="true"/>
+			<Gesture ref="n-rotate" gestureOn="true"/>
+		</GestureList>
+		
+	</GigaPixelViewer>	
+
+	<DebugKit displayOn="true" displayAlwaysOn="false" displayRadius="300">
+		<DebugLayer type="point_shapes" displayOn="true"/>
+		<DebugLayer type="cluster_circle" displayOn="true"/>
+		<DebugLayer type="cluster_box" displayOn="true"/>
+		<DebugLayer type="cluster_center" displayOn="true"/>
+		<DebugLayer type="cluster_web" displayOn="true"/>
+		<DebugLayer type="cluster_rotation" displayOn="true"/>
+	</DebugKit>
+	
+</GestureWorksApplication>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cml tuio="true" simulator="false">
+	<GigapixelElement src="library/assets/deepzoom/space.xml" x="0" y="-170" width="1920" />
+</cml>
