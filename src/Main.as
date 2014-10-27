@@ -1,14 +1,12 @@
 package 
 {
-	import com.gestureworks.core.GestureWorks;
 	import com.gestureworks.cml.core.CMLParser;
-	import com.gestureworks.components.CMLDisplay; CMLDisplay;
-	import flash.events.Event;
-	import flash.display.StageScaleMode;
-	import flash.display.Stage;
+	import com.gestureworks.core.GestureWorks;
 	import flash.display.StageAlign;
-	
+	import flash.display.StageScaleMode;
+	import flash.events.Event;
 	import com.gestureworks.core.GestureWorksAIR; GestureWorksAIR;
+	
 
 	[SWF(width = "1280", height = "720", backgroundColor = "0x333333", frameRate = "60")]
 
@@ -21,7 +19,7 @@ package
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
 			
-			key = "pJmPx9zqkqbs1pKdk5iXraWnrJerj7m4x5SVqaSlkpenoKQ=";
+			key = "cl3ar";
 			
 			cml = "library/cml/GigapixelElement.cml";
 			CMLParser.instance.addEventListener(CMLParser.COMPLETE, cmlInit);

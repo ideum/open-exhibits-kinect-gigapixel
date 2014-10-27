@@ -15,20 +15,16 @@
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
-    <class path="src" />
-    <class path="..\..\lib" />
-    <class path="..\..\cml_core" />
-    <class path="..\..\lib\flickr-.87\src" />
-    <class path="..\..\lib\modestMaps" />
-    <class path="..\..\sdks\openzoom_SDK" />
-    <class path="..\..\gml_core" />
+    <!-- example: <class path="..." /> -->
   </classpaths>
   <!-- Build options -->
   <build>
     <option accessible="False" />
+    <option advancedTelemetry="False" />
     <option allowSourcePathOverlap="False" />
     <option benchmark="False" />
     <option es="False" />
+    <option inline="False" />
     <option locale="" />
     <option loadConfig="" />
     <option optimize="True" />
@@ -75,6 +71,8 @@
     <element path="..\..\lib\away3d3.swc" />
     <element path="..\..\lib\map_1_20.swc" />
     <element path="..\..\lib\tweener-400.swc" />
+    <element path="lib\GestureWorksGML_3.5.0.swc" />
+    <element path="lib\GestureWorksCML_3.5.0.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
@@ -98,7 +96,7 @@
   </compileTargets>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
-    <!-- example: <hidden path="..." /> -->
+    <hidden path="obj" />
   </hiddenPaths>
   <!-- Executed before build -->
   <preBuildCommand />
@@ -111,5 +109,8 @@
     <option testMovieCommand="Run.bat" />
   </options>
   <!-- Plugin storage -->
-  <storage />
+  <storage>
+    <entry key="at_enabled"><![CDATA[0]]></entry>
+    <entry key="at_password"><![CDATA[]]></entry>
+  </storage>
 </project>
